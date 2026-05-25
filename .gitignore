@@ -430,3 +430,8 @@ FodyWeavers.xsd
 # Ignore executable files and VS Code workspace settings
 *.exe
 .vscode/
+# Archivos de Code::Blocks
+bin/
+obj/
+*.layout
+*.depend
