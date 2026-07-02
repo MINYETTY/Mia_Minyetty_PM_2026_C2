@@ -3,7 +3,7 @@
 /* Archivos y caracteres.
 El programa lee caracteres de un archivo.*/
 
-void main(void)
+int main(void)
 {
     char p1;
     FILE *ar;
@@ -17,5 +17,8 @@ void main(void)
         fclose(ar);
     }
     else
-       printf("No se puede abrir el archivo");
+    {
+        printf("No se puede abrir el archivo");
+    }
+    return 0;
 }

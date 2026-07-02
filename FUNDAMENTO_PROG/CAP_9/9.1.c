@@ -3,7 +3,7 @@
 /* Archivos y caracteres.
 El programa escribe caractares en un archivos. */
 
-void main(void)
+int main(void)
 {
     char p1;
     FILE *ar;
@@ -11,9 +11,14 @@ void main(void)
     if (ar != NULL)
     {
         while ((p1=getchar()) != '\n')
+        {
              fputc(p1, ar);
+        }
         fclose(ar);
     }
     else
-      printf("No se puede abrir el archivo")
+    {
+        printf("No se puede abrir el archivo");
+    }
+    return 0;
 }
