@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Carlos",
+        "apellido": "Rosario",
+        "promedio": 94.5,
+        "materia": "Programacion C"
+    },
+    {
+        "nombre": "Mia",
+        "apellido": "Minyetty",
+        "promedio": 98.0,
+        "materia": "Calculo Integral"
+    },
+    {
+        "nombre": "Jose",
+        "apellido": "Rodriguez",
+        "promedio": 85.2,
+        "materia": "Fisica Mecanica"
+    },
+    {
+        "nombre": "Ana",
+        "apellido": "Martinez",
+        "promedio": 91.0,
+        "materia": "Dibujo Tecnico"
+    },
+    {
+        "nombre": "Luis",
+        "apellido": "Perez",
+        "promedio": 79.4,
+        "materia": "Programacion C"
+    },
+    {
+        "nombre": "Laura",
+        "apellido": "Sanchez",
+        "promedio": 96.5,
+        "materia": "Calculo Integral"
+    },
+    {
+        "nombre": "Miguel",
+        "apellido": "Gomez",
+        "promedio": 88.0,
+        "materia": "Fisica Mecanica"
+    },
+    {
+        "nombre": "Elena",
+        "apellido": "Diaz",
+        "promedio": 92.3,
+        "materia": "Dibujo Tecnico"
+    },
+    {
+        "nombre": "David",
+        "apellido": "Fernandez",
+        "promedio": 81.7,
+        "materia": "Programacion C"
+    },
+    {
+        "nombre": "Sofia",
+        "apellido": "Castillo",
+        "promedio": 95.0,
+        "materia": "Calculo Integral"
+    }
+]
