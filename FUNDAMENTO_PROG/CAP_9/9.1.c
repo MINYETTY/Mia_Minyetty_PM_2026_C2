@@ -1,24 +1,28 @@
 #include <stdio.h>
 
 /* Archivos y caracteres.
-El programa escribe caractares en un archivos. */
-
-int main(void)
-{
+   El programa escribe caracteres en un archivo. */
+int main(void) {
     char p1;
     FILE *ar;
+
+    /* Se abre el archivo arc.txt para escritura ("w") */
     ar = fopen("arc.txt", "w");
-    if (ar != NULL)
-    {
-        while ((p1=getchar()) != '\n')
-        {
-             fputc(p1, ar);
+
+    if (ar != NULL) {
+        /* Agregué este mensaje para que sepas cuándo escribir */
+        printf("Escribe el texto a guardar (presiona Enter para terminar):\n");
+        
+        while ((p1 = getchar()) != '\n') {
+            /* Se escriben caracteres en el archivo mientras no se detecte el salto de línea */
+            fputc(p1, ar);
         }
-        fclose(ar);
+        
+        fclose(ar); /* Se cierra el archivo para guardar los cambios físicamente */
+        printf("\n¡Archivo guardado con éxito!\n");
+    } else {
+        printf("Error: No se puede abrir o crear el archivo.\n");
     }
-    else
-    {
-        printf("No se puede abrir el archivo");
-    }
+
     return 0;
 }

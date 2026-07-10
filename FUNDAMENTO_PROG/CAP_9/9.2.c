@@ -1,24 +1,31 @@
 #include <stdio.h>
 
 /* Archivos y caracteres.
-El programa lee caracteres de un archivo.*/
-
-int main(void)
-{
+   El programa lee caracteres de un archivo. */
+int main(void) {
     char p1;
     FILE *ar;
-    if ((ar = fopen("c:\\temp\\arc.txt", "r")) != NULL)
-    {
-        while (!feof(ar))
-        {
-            p1 = fgetc(ar);
-            putchar(p1);
+
+    /* Se abre el archivo arc.txt en modo lectura ("r" de read) */
+    if ((ar = fopen("arc.txt", "r")) != NULL) {
+        printf("--- Leyendo el contenido de arc.txt ---\n\n");
+        
+        /* Se leen caracteres mientras no se detecte el fin del archivo (EOF) */
+        while (!feof(ar)) {
+            p1 = fgetc(ar); /* Lee el caracter del archivo */
+            
+            /* Validación para no imprimir el salto de fin de archivo */
+            if (!feof(ar)) {
+                putchar(p1); /* Despliega el caracter en la pantalla */
+            }
         }
-        fclose(ar);
+        
+        printf("\n\n--- ¡Lectura terminada! ---\n");
+        fclose(ar); /* Siempre cerramos el archivo al terminar */
+    } else {
+        printf("Error: No se puede abrir el archivo.\n");
+        printf("Asegúrate de que 'arc.txt' existe en la misma carpeta.\n");
     }
-    else
-    {
-        printf("No se puede abrir el archivo");
-    }
+
     return 0;
 }
