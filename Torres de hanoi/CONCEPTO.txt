@@ -1,0 +1,38 @@
+Las Torres de Hanói es un problema clásico de recursividad que consiste en mover una pila de n discos 
+de un poste origen a un poste destino, usando un poste auxiliar, respetando dos reglas:
+
+Solo se puede mover un disco a la vez (el que está en la cima de una pila).
+Nunca se puede colocar un disco más grande sobre uno más pequeño.
+
+La solución recursiva se basa en una idea elegante: para mover n discos de A a C (usando B como auxiliar):
+
+Mover los n−1 discos superiores de A a B (usando C como auxiliar).
+Mover el disco más grande (el n) de A a C.
+Mover los n−1 discos de B a C (usando A como auxiliar).
+
+El número mínimo de movimientos necesarios sigue la fórmula:
+M(n) =2^n - 1
+
+Para 64 discos, esto da:
+M(64) = 2^64 - 1 =
+18,446,744,073,709,551,615 movimientos
+Un número astronómico, que es la base de la leyenda.
+
+La terrible Leyenda de los monjes.
+
+Cuenta la leyenda —popularizada por el matemático francés Édouard Lucas en 1883,
+quien inventó el juego— que en un templo hindú (algunas versiones lo sitúan en Benarés, 
+bajo la cúpula que marca el centro del mundo) los monjes custodian 64 discos de oro puro, apilados en orden decreciente
+de tamaño sobre una de tres varillas de diamante, tal como Brahma los colocó en el momento de la Creación.
+Día y noche, sin descanso, generación tras generación de monjes trabaja moviendo los discos, obedeciendo estrictamente
+las reglas del juego: un disco a la vez, y jamás uno grande sobre uno pequeño. Según la profecía, cuando el último disco
+encaje en su lugar en la tercera varilla, completando la torre, la torre se derrumbará y el mundo llegará a su fin.
+¿Por qué esto resulta aterrador (y matemáticamente reconfortante)?
+Porque incluso si los monjes movieran un disco porsegundo, sin errores, sin dormir jamás, tardarían:
+18,446,744,073,709,551,615 segundos ≈ 584,942 millones de años.
+
+Esto es muchísimo más que la edad estimada del universo (~13,800 millones de años).
+Es decir: la leyenda nos asegura que, aunque el fin del mundo esté "programado" para ocurrir cuando termine el ritual,
+la naturaleza exponencial del problema (2^n crece brutalmente rápido) garantiza que tenemos un 
+margen de seguridad cósmico. Es una hermosa metáfora para enseñar por qué los algoritmos con
+complejidad O(2^n) son inviables en la práctica para valores grandes de n.
