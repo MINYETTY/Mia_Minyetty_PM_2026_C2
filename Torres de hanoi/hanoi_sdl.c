@@ -18,7 +18,7 @@ typedef struct {
 } Movimiento;
 
 typedef struct {
-    int discos[MAX_DISCOS]; // tamanos apilados, indice 0 = base
+    int discos[MAX_DISCOS]; // tamaños apilados, indice 0 = base
     int cantidad;
 } Poste;
 
